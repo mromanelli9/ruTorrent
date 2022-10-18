@@ -2587,23 +2587,23 @@ var theWebUI =
 	        var self = theWebUI;
 		var ul = theConverter.speed(self.total.speedUL);
 		var dl = theConverter.speed(self.total.speedDL);
-		var newTitle = '';
-		if(theWebUI.settings["webui.speedintitle"])
-		{
-			if(ul.length)
-				newTitle+=('↑'+ul+' ');
-			if(dl.length)
-				newTitle+=('↓'+dl+' ');
-		}
-		newTitle+="ruTorrent v"+self.version;
-		if(document.title!=newTitle)
-			document.title = newTitle;
-	        $("#stup_speed").text(ul);
-	        $("#stup_limit").text((self.total.rateUL>0 && self.total.rateUL<327625*1024) ? theConverter.speed(self.total.rateUL) : theUILang.no);
-	        $("#stup_total").text(theConverter.bytes(self.total.UL));
-	        $("#stdown_speed").text(dl);
-	        $("#stdown_limit").text((self.total.rateDL>0 && self.total.rateDL<327625*1024) ? theConverter.speed(self.total.rateDL) : theUILang.no);
-	        $("#stdown_total").text(theConverter.bytes(self.total.DL));
+		// var newTitle = '';
+		// if(theWebUI.settings["webui.speedintitle"])
+		// {
+		// 	if(ul.length)
+		// 		newTitle+=('↑'+ul+' ');
+		// 	if(dl.length)
+		// 		newTitle+=('↓'+dl+' ');
+		// }
+		// newTitle+="ruTorrent v"+self.version;
+		// if(document.title!=newTitle)
+		// 	document.title = newTitle;
+	    //     $("#stup_speed").text(ul);
+	    //     $("#stup_limit").text((self.total.rateUL>0 && self.total.rateUL<327625*1024) ? theConverter.speed(self.total.rateUL) : theUILang.no);
+	    //     $("#stup_total").text(theConverter.bytes(self.total.UL));
+	    //     $("#stdown_speed").text(dl);
+	    //     $("#stdown_limit").text((self.total.rateDL>0 && self.total.rateDL<327625*1024) ? theConverter.speed(self.total.rateDL) : theUILang.no);
+	    //     $("#stdown_total").text(theConverter.bytes(self.total.DL));
 
 		if (self.settings['webui.show_open_status']
 			&& 'systemInfo' in self
